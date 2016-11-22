@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML paragraph made with only Javascript</title>
+	<script src="angular/angular.js"></script>
+	<style>
+		body>p:nth-child(7n+2){
+			background-color: red;
+		}
+		body>p:nth-child(7n+3){
+			background-color: orange;
+		}
+		body>p:nth-child(7n+4){
+			background-color: yellow;
+		}
+		body>p:nth-child(7n+5){
+			background-color: green;
+		}
+		body>p:nth-child(7n+6){
+			background-color: blue;
+		}
+		body>p:nth-child(7n+7){
+			background-color: indigo;
+		}
+		body>p:nth-child(7n+8){
+			background-color: violet;
+		}
+		div{
+			background: gray;
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		for(var i=1;i<=840;i++){
+			var par = document.createElement('p')
+			par.appendChild(document.createTextNode('Hello'))
+			var dv = document.createElement('div')
+			document.body.appendChild(dv.appendChild(par))
+		}	
+		// var j = 0
+		// while(j<840){
+		// 	switch(j%7){
+		// 		case 0:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Red";
+		// 			break;
+		// 		case 1:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Orange";
+		// 			break;
+		// 		case 2:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Yellow";
+		// 			break;
+		// 		case 3:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Green";
+		// 			break;
+		// 		case 4:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Blue";
+		// 			break;
+		// 		case 5:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Indigo";
+		// 			break;
+		// 		case 6:
+		// 			document.getElementsByTagName('p')[j].style.backgroundColor="Violet";
+		// 			break;
+		// 	}
+		// j+=1
+		// }
+	</script>
+</body>
+</html>
